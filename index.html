@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Technical Documentation Page</title>
+</head>
+<body translate="no">
+    <nav id="navbar">
+        <header>CONTANTS</header>
+        <ul id="nav-list">
+            <li>
+                <a class="nav-link" href="#INTRODUCTION">INTRODUCTION</a>
+            </li>
+            <li>
+                <a class="nav-link" href="#What_you_should_already_know">WHAT YOU SHOULD ALREADY KNOW</a>
+            </li>
+            <li>
+                <a class="nav-link" href="#LARAVEL_ARCHITECTURE">LARAVEL ARCHITECTURE</a>
+            </li>
+            <li>
+                <a class="nav-link" href="#CAKEPHP_ARCHITECTURE">CAKEPHP ARCHITECTURE</a>
+            </li>
+            <li>
+                <a class="nav-link" href="#CODEIGNITER_ARCHITECTURE">CODEIGNITER ARCHITECTURE</a>
+            </li>
+            <li>
+                <a class="nav-link" href="#DISCUSSION">DISCUSSION</a>
+            </li>
+            <li>
+                <a class="nav-link" href="#CONCLUSION">CONCLUSION</a>
+            </li>
+        </ul>
+    </nav>
+    
+    <main id="main-doc">
+        <h1 style="text-align: center;">framework comparision</h1>
+        <section id="INTRODUCTION" class="main-section">
+            <header>INTRODUCTION</header>
+            <p>PHP is scripting language that is widely used for web development purposes. A scripting language is basically language that is translated into machine language when the code is run rather than beforehand. PHP is popular because of its flexibility, ease of use and learn and dynamic property. Though is PHP having all its upsides,coding in PHP gets repetitive. This repetitiveness with addition of new programmers inability of organizing code ultimately leads to code that is unreadable and not very usable.</p>
+            <p>Here to solve these problems PHP frameworks come into play. PHP frameworks helps developers by providing them with templates that a developer can easily follow to write their code. Also, when other developers read or edit other programmer’s code the template helps them to naviagate throughout the code. These frameworks also come with API and extensions that further in line helps to build large projects with ease. In recent years many frameworks for PHP have been developed. Developers can choose among popular frameworks like Laravel, CakePHP, CodeIgniter etc. In this report we will be going through the differences among the major three frameworks of PHP that are Laravel, CodeIgniter and CakePHP.  </p>   
+        </section>
+        <section id="What_you_should_already_know" class="main-section">
+            <header>WHAT YOU SHOULD ALREADY KNOW</header>
+            <p>This guide assumes you have the following basic background:</p>
+            <ul>
+                <li>A general understanding of the Internet and the World Wide Web (WWW).</li>
+                <li>Good working knowledge of HyperText Markup Language (HTML).</li>
+                <li>Frameworks</li>
+            </ul>
+            <p>For say,</p>
+            <code>function greetMe(yourName) { alert("Hello " + yourName); }
+                greetMe("World");</code>
+        </section>
+        <section id="LARAVEL_ARCHITECTURE" class="main-section">
+            <header>LARAVEL ARCHITECTURE</header>
+            <p>Laravel is a PHP-based web platform with an MVC architecture
+                at its heart. Laravel was designed to make it easier for PHP developers to get started. With Laravel, you spend less time worrying
+                about a project’s configuration, design, and dependencies and more
+                time getting down to business. Laravel is an MVC platform for
+                developing modern web applications, as previously mentioned. It’s
+                a software architecture standard that distinguishes between the
+                representation of data and how users communicate with it. Its architectural standard, which dates back to the mid-1970s, is not
+                particularly recent. It’s still important, and it’s used by a lot of
+                frameworks today.</p>
+                <code>?php namespace App;
+                    use Illuminate\Database\Eloquent\Model;
+                    class Task extends Model
+                    }</code>
+            <h3>Model</h3>
+            <p>Model in MVC, as we all know, handles the data in the database or
+                some other storage of the application. Model is a class of properties
+                in the Laravel app. In other words, if you design a Student project
+                in Laravel and build a class with a unique name, that class will be
+                the model for your tables, and columns will be database properties.
+                Student Properties
+                </p>
+                <ul>
+                    <li>Name</li>
+                    <li> Department</li>
+                    <li> Enroll No</li>
+                </ul>
+            <h3>View and Control</h3>
+            <p>In the MVC Pattern view is used to display data. If we discuss
+                Views of Laravel then all the views are stored in the directory
+                resources/views. For example, you create a student.blade.php file
+                then it is stored in a resources/views directory of our project. That
+                file contains code and View display the page</p>
+                <code>// Using a short name
+                    Cache::config('short', [
+                        'className' => 'File',
+                        'duration' => '+1 hours',
+                        'path' => CACHE,
+                        'prefix' => 'cake_short_'
+                    ]);
+                    </code>
+            <p>In the MVC Pattern Controller is used to handling the request.
+                With a single line of code, Laravel resource routing assigns the
+                typical “CRUD” routes to a controller. It works as a directing traffic
+                between Views and Models. Laravel will create a new file in the
+                app/Http/Controllers directory called StudentController.php. The
+                controller includes a method for each of the available resource
+                operations. Resource Controller handles many actions like Get,
+                Post, Delete, Put, Patch etc</p>
+            <h3>Pros</h3>
+            <ul>
+                <li>Scalable</li>
+                <li>Includes namespaces and interfaces</li>
+                <li>Reuses the components</li>
+            </ul>
+            <h3>Cons</h3>
+            <ul>
+                <li>Sometimes break application when you move Laravel 4 to 5</li>
+                <li>Upgrades might be problematic</li>
+                <li>Heavy documentation</li>
+            </ul>
+        </section>
+        <section id="CAKEPHP_ARCHITECTURE" class="main-section">
+            <header>CAKEPHP ARCHITECTURE</header>
+            <p>CakePHP is a PHP application that is free to use. Its aim is to make
+                the process of creating, deploying, and maintaining applications
+                much simpler. CakePHP uses an MVC-style architecture that is bothefficient and simple to understand. Models, Views, and Controllers
+                ensure the business logic is kept separate from the data and presentation layers in a natural way. CakePHP ORM (object-relational
+                mapping) is a PHP hybrid that borrows key concepts from both the
+                active record and data mapper patterns. The CakePHP ORM has
+                two primary object types: table and entity classes, which represent
+                database tables and individual table rows, respectively. CakePHP 3
+                included a query builder to go along with the new ORM. Instead of
+                writing SQL queries by hand, the query builder offers a collection of
+                classes and methods for creating them programmatically. The query
+                builder is heavily used by the ORM. Routing and reverse routing
+                are two different types of routing. Incoming requests are routed to
+                the correct controller and action using the CakePHP router, which
+                allows for complex HTTP application routing. Reverse routing esatablishes a connection between routes and links, ensuring that links
+                are created with the correct uniform resource locator every time</p>
+                <code>'Cache' => [
+                    'short' => [
+                        'className' => 'File',
+                        'duration' => '+1 hours',
+                        'path' => CACHE,
+                        'prefix' => 'cake_short_'
+                    ],
+                    // Using a fully namespaced name.
+                    'long' => [
+                        'className' => 'Cake\Cache\Engine\FileEngine',
+                        'duration' => '+1 week',
+                        'probability' => 100,
+                        'path' => CACHE . 'long' . DS,
+                    ]
+                ]</code>
+            <h3>Pros</h3>
+                <ul>
+                    <li>CakePHP’s code generation and scaffolding function allows
+                        programmers to build prototypes and reusable code quickly.
+                        Developers become more efficient as a result of code reuse,
+                        which reduces total development time. They can also quickly
+                        build new PHP applications by repurposing existing code
+                        for various projects.</li>
+                    <li>CakePHP does not require programmers to use complex XML
+                        or YAML files, unlike other PHP programming frameworks.
+                        They can quickly set up the database and begin developing
+                        the application. In addition, by automating the functions, the
+                        architecture facilitates database management. To prevent
+                        writing additional code, programmers may use CakePHP’s
+                        built-in validation and authentication features</li>
+                    <li>Working with standard PHP classes can be intimidating for
+                        many developers. CakePHP helps programmers to access the
+                        Core and App folders directly when working with various
+                        groups. As a result, they would be able to describe the functions of each class in a much more straightforward mann </li>
+                </ul>
+            <h3>Cons</h3>
+                <ul>
+                    <li>Many users believe CakePHP’s documentation is insufficient
+                        and needs to be improved. CakePHP is known to be more
+                        complex than other PHP frameworks such as CodeIgniter,
+                        despite being quick and easy to understand. As a result,
+                        developers must devote both time and effort to learning
+                        CakePHP’s different features.</li>
+                    <li>CakePHP does not allow default routes for Fancy URLs, unlike other PHP frameworks such as Symfony. As a result,
+                        programmers must update the default routes when creating
+                        Fancy URLs. CakePHP’s efficiency for modern web application creation is harmed by this functional</li>
+                    <li>users have also mentioned the difficulties in upgrading CakePHP
+                        from version 2.x to 3.x. CakePHP 3 does not accept a range
+                        of backwards compatible improvements in order to make it
+                        quicker. As a result, web programmers would find it difficult
+                        to upgrade their current applications to the latest version of
+                        the PHP platform. Developers, on the other hand, can use
+                        CakePHP 3 to create applications with the latest features.</li>
+                </ul>
+        </section>
+        <section id="CODEIGNITER_ARCHITECTURE" class="main-section">
+            <header>CODEIGNITER ARCHITECTURE</header>
+            <p>CodeIgniter is a lightweight PHP platform designed for developers
+                who need a simple and elegant toolkit to build full-featured web applications.CodeIgniter is loosely based on the popular model–view–controller
+                (MVC) development pattern. Although controller classes are required for CodeIgniter creation, models and views are optional.
+                CodeIgniter can also be updated to use Hierarchical Model View
+                Controller (HMVC), which allows developers to organize Controller,
+                Models, and Views in a sub-directory structure</p>
+                <code><?php 
+                    class Test extends CI_Controller {
+                     
+                       public function index() { 
+                          $this->load->helper('url'); 
+                          $this->load->view('test');  } 
+                    } ?></code>
+            <h3>Features</h3>
+            <ul>
+                <li>The source code for the CodeIgniter framework is around
+                    2MB in size. This makes learning CodeIgniter and how it
+                    works a breeze. It also makes it easier to deploy and update.</li>
+                <li>Users prefer applications that are quick to load. If you’ve
+                    worked with some of the more recent frameworks, you’ll
+                    notice that they load in less than a second after installation.
+                    You will load CodeIgniter in less than 50 milliseconds on
+                    average. When you deal with the CodeIgniter platform, you
+                    don’t have to spend as much time optimizing as you might
+                    with another framework</li>
+                <li>The built-in features are intended to work on their own,
+                    without the need for additional components. This makes
+                    maintenance and improvements a breeze.
+                    </li>
+                <li>The system is well known, and CodeIgniter has a lot of good
+                    books, tutorials, and answers to forum questions. This means
+                    that whatever dilemma you’re facing, chances are somebody
+                    has already faced it, solved it, and the answer is waiting for
+                    you</li>
+            </ul>
+            <p>CodeIgniter is a model-view-controller system. Model View Controller is the abbreviation for Model View Controller. This the first to react when a user requests a resource. The controller
+                decodes the user’s request and, if necessary, requests the data.
+                If you want to retrieve a customer with the id=3, for example, the
+                controller will receive your request and then ask the CodeIgniter
+                models to retrieve the record with the id=3. The record will be
+                returned to the controller by the CodeIgniter models. After that,
+                the controller sends the result to the view, which formats it for human use. The user is then presented with the results in the browser.
+            </p>
+        </section>
+        <section id="DISCUSSION" class="main-section">
+            <header>DISCUSSION</header>
+            <p>For the tasks of Complex Data, CRUD Operations, and Upload
+                Images, CodeIgniter delivered the best results. When it came to
+                Read/Write Files, Laravel was the best, but when it came to Complex
+                Data, it was the worst. This may be because CodeIgniter is the easiest PHP framework with the fewest files of the three frameworks
+                studied; as a result, the framework data transfer is the quickest.
+                This may be because CodeIgniter is the simplest PHP framework,
+                with the fewest files of the three frameworks studied; as a result, the
+                framework data transmitting overhead is low, making it more powerful. CodeIgniter has the best overall results, while Cake PHP has
+                the worst. CakePHP has the highest ranking in terms of reusability.
+                This indicated that efficiency and reusability are not proportional.
+                This may be due to a variety of factors. Regular expressions are unable to handle repetitive variable events, which can lead to reusability score inaccuracy. To produce more accurate regular expressions,
+                more research is required</p>
+        </section>
+        <section id="CONCLUSION" class="main-section">
+            <header>CONCLUSION</header>
+            <p>For the tasks of Complex Data, CRUD Operations, and Upload
+                Images, CodeIgniter delivered the best results. When it came to
+                Read/Write Files, Laravel was the best, but when it came to Complex
+                Data, it was the worst. This may be because CodeIgniter is the easiest PHP framework with the fewest files of the three frameworks
+                studied; as a result, the framework data transfer is the quickest.
+                This may be because CodeIgniter is the simplest PHP framework,
+                with the fewest files of the three frameworks studied; as a result, the
+                framework data transmitting overhead is low, making it more powerful. CodeIgniter has the best overall results, while Cake PHP has
+                the worst. CakePHP has the highest ranking in terms of reusability.
+                This indicated that efficiency and reusability are not proportional.
+                This may be due to a variety of factors. Regular expressions are unable to handle repetitive variable events, which can lead to reusability score inaccuracy. To produce more accurate regular expressions,
+                more research is required</p>
+        </section>
+    </main>
+</body>
+</html>
